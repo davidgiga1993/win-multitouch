@@ -1,0 +1,23 @@
+plugins {
+	id 'java-library'
+	id 'maven-publish'
+}
+
+group 'org.devcore'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+jar {
+	from {
+		"x64/Debug/WinMultitouch64.dll"
+	}
+}
+
+dependencies {
+
+}
