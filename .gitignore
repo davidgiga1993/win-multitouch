@@ -2,4 +2,6 @@
 *.iml
 *.idea
 .vs/
-/src/x64
+x64/Debug
+Debug/
+build/

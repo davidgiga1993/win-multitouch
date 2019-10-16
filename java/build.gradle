@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.devcore'
-version '1.0-SNAPSHOT'
+version libVersion
 
 sourceCompatibility = 1.8
 
@@ -14,10 +14,18 @@ repositories {
 
 jar {
 	from {
-		"x64/Debug/WinMultitouch64.dll"
+		"../native/x64/Debug/WinMultitouch64.dll"
+		"../native/Debug/WinMultitouch.dll"
 	}
 }
-
+processResources {
+	from ('../native/x64/Debug/WinMultitouch64.dll') {
+		into ''
+	}
+	from ('../native/Debug/WinMultitouch.dll') {
+		into ''
+	}
+}
 publishing {
 	repositories {
 		maven {
@@ -36,6 +44,10 @@ publishing {
 	}
 }
 
-dependencies {
 
+processResources {
+	from {
+		"../native/x64/Debug/WinMultitouch64.dll"
+		"../native/Debug/WinMultitouch.dll"
+	}
 }
