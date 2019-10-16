@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Handles multitouch events for N windows.<br>
- * <b>Make sure to load the native library before using this class!</b>
+ * Handles multitouch events for one or more windows.
+ * The coordinates used are always relative to the client area of the window
  */
 public class Multitouch
 {

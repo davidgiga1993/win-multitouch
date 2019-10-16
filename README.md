@@ -1,6 +1,7 @@
 # About
 
-This library provides a JNI interface for getting multitouch events on windows 8 and newer.
+This library provides an interface for listening for multitoch inputs on windows using java.
+It treats mouse, pen and finger the same way. 
 
 
 Note that this project is under development and does not yet include all the parts.
