@@ -3,9 +3,6 @@ plugins {
 	id 'maven-publish'
 }
 
-group 'org.devcore'
-version libVersion
-
 sourceCompatibility = 1.8
 
 repositories {
@@ -18,32 +15,26 @@ jar {
 		"../native/Debug/WinMultitouch.dll"
 	}
 }
+
 processResources {
-	from ('../native/x64/Debug/WinMultitouch64.dll') {
+	from('../native/x64/Debug/WinMultitouch64.dll') {
 		into ''
 	}
-	from ('../native/Debug/WinMultitouch.dll') {
+	from('../native/Debug/WinMultitouch.dll') {
 		into ''
-	}
-}
-publishing {
-	repositories {
-		maven {
-			name = "GitHubPackages"
-			url = uri("https://maven.pkg.github.com/davidgiga1993/win-multitouch-native")
-			credentials {
-				username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
-				password = project.findProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
-			}
-		}
-	}
-	publications {
-		gpr(MavenPublication) {
-			from(components.java)
-		}
 	}
 }
 
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			groupId = 'org.devcore'
+			artifactId = 'win-multitouch'
+			version = '1.0'
+			from components.java
+		}
+	}
+}
 
 processResources {
 	from {
