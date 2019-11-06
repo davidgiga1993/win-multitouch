@@ -93,7 +93,7 @@ public class Multitouch
 	 * @param button  Button
 	 */
 	@SuppressWarnings("unused")
-	private void nativeOnTouchCallback(long hwnd, int x, int y, int pointer, int mode, int button)
+	protected void nativeOnTouchCallback(long hwnd, int x, int y, int pointer, int mode, int button)
 	{
 		MultitouchProcessor processor = callbacks.get(hwnd);
 		if (processor != null)
