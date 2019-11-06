@@ -12,7 +12,7 @@ extern "C" {
 	 * Method:    initTouch
 	 * Signature: (J)I
 	 */
-	JNIEXPORT jint JNICALL Java_org_devcore_jni_WinMultitouch_initTouch
+	JNIEXPORT jint JNICALL Java_org_devcore_win_WinMultitouch_initTouch
 	(JNIEnv *, jobject, jlong);
 
 	/*
@@ -20,7 +20,7 @@ extern "C" {
 	 * Method:    dispose
 	 * Signature: ()V
 	 */
-	JNIEXPORT void JNICALL Java_org_devcore_jni_WinMultitouch_dispose
+	JNIEXPORT void JNICALL Java_org_devcore_win_WinMultitouch_dispose
 	(JNIEnv *, jobject, jlong);
 
 #ifdef __cplusplus
