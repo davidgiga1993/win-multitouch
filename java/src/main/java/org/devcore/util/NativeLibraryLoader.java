@@ -67,10 +67,9 @@ public class NativeLibraryLoader
 	 */
 	private static File extractFile(String sourcePath, File extractedFile) throws IOException
 	{
-		if (extractedFile.exists())
+		if (extractedFile.exists() && !extractedFile.delete())
 		{
-			// File already available - just reuse
-			return extractedFile;
+			throw new RuntimeException("Could not extract file");
 		}
 
 		try (InputStream input = readFile(sourcePath))
