@@ -1,10 +1,8 @@
 # About
 
-This library provides an interface for listening for multitoch inputs on windows using java.
+This library provides an interface for listening for multitouch inputs on windows using java.
 It treats mouse, pen and finger the same way. 
 
-
-Note that this project is under development and does not yet include all the parts.
 
 ## Release
 The build dll and jar binary is available at the maven repo:
