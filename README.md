@@ -5,7 +5,7 @@ It treats mouse, pen and finger the same way.
 
 
 ## Release
-The build dll and jar binary is available at the maven repo:
+The dll and jar binary is available at the maven repo:
 
 ```xml
 <repository>
